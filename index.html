@@ -10,22 +10,20 @@
   body {
     font-family: 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif;
     background: #fff;
-    color: #222;
-    font-size: 13px;
-    line-height: 1.7;
+    color: #1a1a1a;
+    font-size: 17px;
+    line-height: 1.8;
   }
 
   :root {
     --black: #1a1a1a;
-    --dark: #333;
-    --mid: #666;
-    --light: #999;
-    --border: #e0e0e0;
-    --bg: #f7f7f7;
-    --accent: #1a1a1a;
+    --dark: #222;
+    --mid: #555;
+    --light: #777;
+    --border: #ccc;
+    --bg: #f5f5f5;
   }
 
-  /* ===== SLIDE BASE ===== */
   .slide {
     width: 297mm;
     min-height: 210mm;
@@ -36,44 +34,45 @@
     flex-direction: column;
   }
 
-  /* ===== COMMON HEADER ===== */
   .slide-header {
-    padding: 10mm 18mm 6mm;
-    border-bottom: 1px solid var(--border);
+    padding: 9mm 18mm 5mm;
+    border-bottom: 2px solid var(--black);
     display: flex;
     align-items: baseline;
     gap: 12px;
   }
   .slide-tag {
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.2em;
     color: #fff;
     background: var(--black);
-    padding: 2px 8px;
+    padding: 3px 10px;
     text-transform: uppercase;
   }
   .slide-title {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 700;
     color: var(--black);
-    letter-spacing: 0.05em;
   }
   .slide-body {
-    padding: 7mm 18mm 8mm;
+    padding: 6mm 18mm 8mm;
     flex: 1;
   }
-
-  /* ===== PAGE NUMBER ===== */
   .page-num {
     position: absolute;
     bottom: 6mm;
     right: 14mm;
-    font-size: 9px;
+    font-size: 12px;
     color: var(--light);
   }
+  .desc-text {
+    font-size: 14px;
+    color: var(--mid);
+    margin-bottom: 8px;
+  }
 
-  /* ===== SLIDE 1: COVER ===== */
+  /* COVER */
   .cover {
     background: #1a1a1a;
     justify-content: center;
@@ -82,15 +81,15 @@
     padding: 20mm;
   }
   .cover-title {
-    font-size: 50px;
+    font-size: 52px;
     font-weight: 300;
     letter-spacing: 0.35em;
     color: #fff;
     margin-bottom: 6px;
   }
   .cover-sub {
-    font-size: 11px;
-    color: #777;
+    font-size: 15px;
+    color: #aaa;
     letter-spacing: 0.2em;
     margin-bottom: 20px;
   }
@@ -101,61 +100,57 @@
     margin: 0 auto 16px;
   }
   .cover-name {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 400;
     color: #fff;
     letter-spacing: 0.15em;
     margin-bottom: 4px;
   }
-  .cover-date {
-    font-size: 11px;
-    color: #666;
-  }
+  .cover-date { font-size: 14px; color: #777; }
 
-  /* ===== SLIDE 2: PROFILE ===== */
+  /* PROFILE */
   .profile-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12mm;
-    align-items: start;
+    gap: 10mm;
   }
   .profile-name {
-    font-size: 28px;
+    font-size: 34px;
     font-weight: 700;
     letter-spacing: 0.1em;
     margin-bottom: 2px;
   }
   .profile-ruby {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--light);
     letter-spacing: 0.2em;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .profile-role {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--mid);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .tag-row {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
   .tag {
-    font-size: 10px;
+    font-size: 15px;
     border: 1px solid var(--border);
-    padding: 2px 8px;
+    padding: 2px 9px;
     color: var(--mid);
   }
   .info-block {
     background: var(--bg);
-    border-left: 2px solid var(--black);
+    border-left: 3px solid var(--black);
     padding: 8px 12px;
     margin-bottom: 8px;
   }
   .info-label {
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.15em;
     color: var(--mid);
@@ -163,7 +158,7 @@
     text-transform: uppercase;
   }
   .info-text {
-    font-size: 11.5px;
+    font-size: 14px;
     color: var(--dark);
     line-height: 1.7;
   }
@@ -176,23 +171,11 @@
   .skill-tag {
     background: var(--black);
     color: #fff;
-    font-size: 10px;
-    padding: 2px 9px;
+    font-size: 15px;
+    padding: 2px 10px;
   }
 
-  /* ===== WORKS COMMON ===== */
-  .section-label {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    color: var(--mid);
-    text-transform: uppercase;
-    margin-bottom: 6px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* ===== SLIDE 3: HP ===== */
+  /* HP */
   .hp-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -203,7 +186,7 @@
     overflow: hidden;
   }
   .hp-img {
-    height: 55mm;
+    height: 52mm;
     overflow: hidden;
     position: relative;
     background: var(--bg);
@@ -218,30 +201,28 @@
     position: absolute;
     top: 7px;
     left: 7px;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
-    padding: 2px 8px;
+    padding: 2px 9px;
     color: #fff;
     letter-spacing: 0.1em;
   }
   .badge-before { background: #555; }
   .badge-after { background: #1a1a1a; }
-  .hp-info {
-    padding: 8px 10px;
-  }
+  .hp-info { padding: 8px 10px; }
   .hp-title {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--black);
     margin-bottom: 2px;
   }
   .hp-period {
-    font-size: 10px;
+    font-size: 15px;
     color: var(--light);
     margin-bottom: 4px;
   }
   .hp-desc {
-    font-size: 10.5px;
+    font-size: 15px;
     color: var(--mid);
     line-height: 1.6;
     margin-bottom: 5px;
@@ -250,31 +231,31 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+    margin-bottom: 4px;
   }
   .hp-tag {
-    font-size: 9px;
+    font-size: 12px;
     border: 1px solid var(--border);
     padding: 1px 7px;
     color: var(--mid);
   }
   .hp-url {
-    font-size: 9.5px;
+    font-size: 12px;
     color: var(--mid);
-    margin-top: 4px;
   }
 
-  /* ===== SLIDE 4: 名刺 ===== */
+  /* 名刺 6枚 */
   .meishi-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
   .meishi-card {
     border: 1px solid var(--border);
     overflow: hidden;
   }
   .meishi-img {
-    height: 38mm;
+    height: 30mm;
     overflow: hidden;
     background: var(--bg);
   }
@@ -284,23 +265,23 @@
     object-fit: contain;
   }
   .meishi-info {
-    padding: 6px 10px;
+    padding: 5px 8px;
     background: var(--bg);
     border-top: 1px solid var(--border);
   }
   .meishi-title {
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--black);
-    margin-bottom: 2px;
+    margin-bottom: 1px;
   }
   .meishi-desc {
-    font-size: 10px;
+    font-size: 12px;
     color: var(--mid);
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
-  /* ===== SLIDE 5: POSTER ===== */
+  /* ポスター */
   .poster-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -311,7 +292,7 @@
     overflow: hidden;
   }
   .poster-img {
-    height: 55mm;
+    height: 52mm;
     overflow: hidden;
     background: var(--bg);
   }
@@ -326,17 +307,17 @@
     border-top: 1px solid var(--border);
   }
   .poster-title {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--black);
     margin-bottom: 1px;
   }
   .poster-desc {
-    font-size: 9px;
+    font-size: 12px;
     color: var(--mid);
   }
 
-  /* ===== SLIDE 6: PRESENTATION ===== */
+  /* プレゼン */
   .slide-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -347,7 +328,7 @@
     overflow: hidden;
   }
   .slide-img {
-    height: 40mm;
+    height: 38mm;
     overflow: hidden;
     background: var(--bg);
   }
@@ -361,23 +342,24 @@
     border-top: 1px solid var(--border);
   }
   .slide-card-title {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--black);
   }
 
-  /* ===== SLIDE 7: LOGIN ===== */
-  .login-grid {
+  /* ログイン */
+  .login-flow {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    grid-template-columns: 1fr 28px 1fr 28px 1fr;
+    gap: 4px;
+    align-items: center;
   }
   .login-card {
     border: 1px solid var(--border);
     overflow: hidden;
   }
   .login-img {
-    height: 48mm;
+    height: 46mm;
     overflow: hidden;
     background: var(--bg);
   }
@@ -391,29 +373,24 @@
     border-top: 1px solid var(--border);
   }
   .login-title {
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--black);
   }
   .login-desc {
-    font-size: 9px;
+    font-size: 12px;
     color: var(--mid);
   }
   .flow-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    color: var(--light);
-  }
-  .login-flow {
-    display: grid;
-    grid-template-columns: 1fr 24px 1fr 24px 1fr;
-    gap: 4px;
-    align-items: center;
+    font-size: 20px;
+    color: var(--dark);
+    font-weight: 700;
   }
 
-  /* ===== SLIDE 8: VIDEO ===== */
+  /* 動画 */
   .video-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -424,21 +401,21 @@
     overflow: hidden;
   }
   .video-info {
-    padding: 6px 10px;
+    padding: 7px 10px;
     border-top: 1px solid var(--border);
   }
   .video-title {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--black);
   }
   .video-desc {
-    font-size: 10px;
+    font-size: 15px;
     color: var(--mid);
     margin-top: 2px;
   }
 
-  /* ===== SLIDE 9: THANK YOU ===== */
+  /* THANK YOU */
   .thankyou {
     background: #1a1a1a;
     justify-content: center;
@@ -447,15 +424,15 @@
     padding: 20mm;
   }
   .ty-title {
-    font-size: 44px;
+    font-size: 46px;
     font-weight: 300;
     letter-spacing: 0.3em;
     color: #fff;
     margin-bottom: 6px;
   }
   .ty-sub {
-    font-size: 12px;
-    color: #777;
+    font-size: 15px;
+    color: #aaa;
     letter-spacing: 0.12em;
     margin-bottom: 18px;
   }
@@ -466,10 +443,19 @@
     margin: 0 auto 16px;
   }
   .ty-text {
-    font-size: 12px;
-    color: #888;
-    line-height: 2;
+    font-size: 15px;
+    color: #aaa;
+    line-height: 2.2;
     letter-spacing: 0.08em;
+  }
+
+  .note-box {
+    font-size: 15px;
+    color: var(--mid);
+    background: var(--bg);
+    padding: 7px 12px;
+    margin-top: 8px;
+    border-left: 2px solid var(--border);
   }
 
   @media print {
@@ -479,7 +465,7 @@
 </head>
 <body>
 
-<!-- ===== SLIDE 1: COVER ===== -->
+<!-- SLIDE 1: COVER -->
 <div class="slide cover">
   <div class="cover-title">PORTFOLIO</div>
   <div class="cover-sub">制作実績集 / Works</div>
@@ -489,7 +475,7 @@
   <div class="page-num" style="color:#555;">— 1 —</div>
 </div>
 
-<!-- ===== SLIDE 2: PROFILE ===== -->
+<!-- SLIDE 2: PROFILE -->
 <div class="slide">
   <div class="slide-header">
     <span class="slide-tag">Profile</span>
@@ -540,22 +526,22 @@
   <div class="page-num">— 2 —</div>
 </div>
 
-<!-- ===== SLIDE 3: HP ===== -->
+<!-- SLIDE 3: HP -->
 <div class="slide">
   <div class="slide-header">
     <span class="slide-tag">Works 01</span>
     <span class="slide-title">ホームページ制作（成長比較）</span>
   </div>
   <div class="slide-body">
-    <div style="margin-bottom:8px; font-size:11px; color:var(--mid);">授業で制作した宇佐合気道会のホームページ。約9ヶ月の成長をBefore/Afterで比較しています。</div>
+    <p class="desc-text">授業で制作した宇佐合気道会のホームページ。約9ヶ月の成長をBefore/Afterで比較しています。</p>
     <div class="hp-grid">
       <div class="hp-card">
         <div class="hp-img">
           <span class="badge badge-before">BEFORE</span>
-          <img src="images/hp1.png" alt="HP第1作">
+          <img src="images/hp1.png" alt="HP第1作 — 2025年9月制作">
         </div>
         <div class="hp-info">
-          <div class="hp-title">HP 第1作 ↗</div>
+          <div class="hp-title">HP 第1作</div>
           <div class="hp-period">2025年9月制作</div>
           <div class="hp-desc">授業開始から約5ヶ月で制作。HTML/CSSの基礎を学びながら初めて形にしました。</div>
           <div class="hp-tags">
@@ -570,10 +556,10 @@
       <div class="hp-card">
         <div class="hp-img">
           <span class="badge badge-after">AFTER</span>
-          <img src="images/hp2.png" alt="HP第2作">
+          <img src="images/hp2.png" alt="HP第2作 — 2026年6月制作">
         </div>
         <div class="hp-info">
-          <div class="hp-title">HP 第2作 ↗</div>
+          <div class="hp-title">HP 第2作</div>
           <div class="hp-period">2026年6月制作</div>
           <div class="hp-desc">9ヶ月の学習を経て制作。より洗練されたレイアウトと機能を実装しました。</div>
           <div class="hp-tags">
@@ -590,27 +576,27 @@
   <div class="page-num">— 3 —</div>
 </div>
 
-<!-- ===== SLIDE 4: 名刺 ===== -->
+<!-- SLIDE 4: 名刺 6枚 -->
 <div class="slide">
   <div class="slide-header">
     <span class="slide-tag">Works 02</span>
     <span class="slide-title">名刺デザイン</span>
   </div>
   <div class="slide-body">
-    <div style="margin-bottom:8px; font-size:11px; color:var(--mid);">授業課題として制作した名刺デザイン4点。学科・専攻ごとに異なるコンセプトで制作しました。</div>
+    <p class="desc-text">授業課題として制作した名刺デザイン6点。学校・学科・専攻ごとに異なるコンセプトで制作しました。</p>
     <div class="meishi-grid">
       <div class="meishi-card">
         <div class="meishi-img">
-          <img src="images/meishi1.png" alt="名刺1">
+          <img src="images/meishi1.png" alt="名刺 — 宇佐合気道会ネオンバージョン">
         </div>
         <div class="meishi-info">
           <div class="meishi-title">宇佐合気道会 ネオンver.</div>
-          <div class="meishi-desc">ツール：Canva　テーマ：ネオンサイン・夜の道場</div>
+          <div class="meishi-desc">ツール：Canva　テーマ：ネオンサイン</div>
         </div>
       </div>
       <div class="meishi-card">
         <div class="meishi-img">
-          <img src="images/meishi2.png" alt="名刺2">
+          <img src="images/meishi2.png" alt="名刺 — 宇佐合気道会ゴールドバージョン">
         </div>
         <div class="meishi-info">
           <div class="meishi-title">宇佐合気道会 ゴールドver.</div>
@@ -619,7 +605,7 @@
       </div>
       <div class="meishi-card">
         <div class="meishi-img">
-          <img src="AI.png" alt="名刺3">
+          <img src="images/meishi3.png" alt="名刺 — 情報処理学科グリーン">
         </div>
         <div class="meishi-info">
           <div class="meishi-title">情報処理学科 名刺</div>
@@ -628,11 +614,29 @@
       </div>
       <div class="meishi-card">
         <div class="meishi-img">
-          <img src="images/meishi4.png" alt="名刺4">
+          <img src="images/meishi4.png" alt="名刺 — AI情報システム専攻">
         </div>
         <div class="meishi-info">
-          <div class="meishi-title">AI情報システム専攻 名刺</div>
+          <div class="meishi-title">AI情報システム専攻</div>
           <div class="meishi-desc">ツール：Canva　テーマ：AI・テクノロジー</div>
+        </div>
+      </div>
+      <div class="meishi-card">
+        <div class="meishi-img">
+          <img src="images/meishi5.png" alt="名刺 — 公務員学科マトリックス">
+        </div>
+        <div class="meishi-info">
+          <div class="meishi-title">公務員学科 マトリックスver.</div>
+          <div class="meishi-desc">ツール：Canva　テーマ：マトリックス</div>
+        </div>
+      </div>
+      <div class="meishi-card">
+        <div class="meishi-img">
+          <img src="images/meishi6.png" alt="名刺 — 公務員学科シンプル">
+        </div>
+        <div class="meishi-info">
+          <div class="meishi-title">公務員学科 シンプルver.</div>
+          <div class="meishi-desc">ツール：Canva　テーマ：清潔感・信頼</div>
         </div>
       </div>
     </div>
@@ -640,40 +644,40 @@
   <div class="page-num">— 4 —</div>
 </div>
 
-<!-- ===== SLIDE 5: POSTER ===== -->
+<!-- SLIDE 5: POSTER -->
 <div class="slide">
   <div class="slide-header">
     <span class="slide-tag">Works 03</span>
     <span class="slide-title">サークル勧誘ポスター</span>
   </div>
   <div class="slide-body">
-    <div style="margin-bottom:8px; font-size:11px; color:var(--mid);">サークル活動（I.C.C）で制作した勧誘ポスター3点。「誰にでも伝わりやすいデザイン」を意識して制作しました。</div>
+    <p class="desc-text">サークル活動（I.C.C）で制作した勧誘ポスター3点。「誰にでも伝わりやすいデザイン」を意識して制作しました。</p>
     <div class="poster-grid">
       <div class="poster-card">
         <div class="poster-img">
-          <img src="images/1.png" alt="ポスター1">
+          <img src="images/11.png" alt="ポスター — 知識の森へようこそ">
         </div>
         <div class="poster-info">
-          <div class="poster-title">ポスター1「知識の森へようこそ」</div>
+          <div class="poster-title">「知識の森へようこそ」</div>
           <div class="poster-desc">目的：新入部員募集　テーマ：猫並みにマイペースでよい</div>
         </div>
       </div>
       <div class="poster-card">
         <div class="poster-img">
-          <img src="images/2.png" alt="ポスター2">
+          <img src="images/22.png" alt="ポスター — I.C.C楽しいことを始めよう">
         </div>
         <div class="poster-info">
-          <div class="poster-title">ポスター2「I.C.C入部しちゃえば？」</div>
-          <div class="poster-desc">目的：新入部員募集　テーマ：いろんな人歓迎（一部CanvaAI使用）</div>
+          <div class="poster-title">「楽しいことを始めよう I.C.C」</div>
+          <div class="poster-desc">目的：新入部員募集　テーマ：新入部員募集（CanvaAI使用）</div>
         </div>
       </div>
       <div class="poster-card">
         <div class="poster-img">
-          <img src="images/3.png" alt="ポスター3">
+          <img src="images/33.png" alt="ポスター — とりあえず覗いってみよう">
         </div>
         <div class="poster-info">
-          <div class="poster-title">ポスター3「とりあえず覗いってみよう！」</div>
-          <div class="poster-desc">目的：新入部員募集　テーマ：迷わず行動（一部CanvaAI使用）</div>
+          <div class="poster-title">「とりあえず覗いってみよう！」</div>
+          <div class="poster-desc">目的：新入部員募集　テーマ：迷わず行動（CanvaAI使用）</div>
         </div>
       </div>
     </div>
@@ -681,26 +685,26 @@
   <div class="page-num">— 5 —</div>
 </div>
 
-<!-- ===== SLIDE 6: PRESENTATION ===== -->
+<!-- SLIDE 6: PRESENTATION -->
 <div class="slide">
   <div class="slide-header">
     <span class="slide-tag">Works 04</span>
     <span class="slide-title">Canvaプレゼンテーション</span>
   </div>
   <div class="slide-body">
-    <div style="margin-bottom:8px; font-size:11px; color:var(--mid);">授業課題として制作したプレゼンスライド。「デジタルディバイド（情報格差）」をテーマに、わかりやすい表現を追求しました。</div>
+    <p class="desc-text">授業課題として制作したプレゼンスライド（全17枚）。「デジタルディバイド」をテーマに子ども向けのわかりやすい表現を追求しました。</p>
     <div class="slide-grid">
       <div class="slide-card">
         <div class="slide-img">
-          <img src="images/slide1.png" alt="スライド1">
+          <img src="images/デジタルディバイド1.png" alt="スライド — タイトル：社会問題を知ろう！デジタルディバイド">
         </div>
         <div class="slide-info">
-          <div class="slide-card-title">タイトルスライド「社会問題を知ろう！デジタルディバイド」</div>
+          <div class="slide-card-title">タイトル「社会問題を知ろう！デジタルディバイド」</div>
         </div>
       </div>
       <div class="slide-card">
         <div class="slide-img">
-          <img src="images/slide2.png" alt="スライド2">
+          <img src="images/デジタルディバイド2.png" alt="スライド — 世の中にはデジタル機器があふれている">
         </div>
         <div class="slide-info">
           <div class="slide-card-title">「世の中にはデジタル機器があふれている」</div>
@@ -708,60 +712,58 @@
       </div>
       <div class="slide-card">
         <div class="slide-img">
-          <img src="images/slide3.png" alt="スライド3">
+          <img src="images/デジタルディバイド3.png" alt="スライド — 使いこなせる人より情報が少ない">
         </div>
         <div class="slide-info">
-          <div class="slide-card-title">「なれている人・なれていない人」の比較</div>
+          <div class="slide-card-title">「使いこなせる人より得る情報が少なく時間がかかる」</div>
         </div>
       </div>
       <div class="slide-card">
         <div class="slide-img">
-          <img src="images/slide4.png" alt="スライド4">
+          <img src="images/デジタルディバイド4.png" alt="スライド — みんなが平等に学べる環境が大切">
         </div>
         <div class="slide-info">
-          <div class="slide-card-title">「この二つタイプの差がデジタルディバイド」</div>
+          <div class="slide-card-title">「みんなが平等に学べる環境が大切だね」</div>
         </div>
       </div>
     </div>
-    <div style="margin-top:8px; font-size:10px; color:var(--light); background:var(--bg); padding:6px 10px;">
-      ツール：Canva　全17スライド構成　対象：初心者・子ども向けにわかりやすく設計
-    </div>
+    <div class="note-box">ツール：Canva　全17スライド構成　対象：初心者・子ども向けにわかりやすく設計</div>
   </div>
   <div class="page-num">— 6 —</div>
 </div>
 
-<!-- ===== SLIDE 7: LOGIN ===== -->
+<!-- SLIDE 7: LOGIN -->
 <div class="slide">
   <div class="slide-header">
     <span class="slide-tag">Works 05</span>
     <span class="slide-title">ログイン画面遷移</span>
   </div>
   <div class="slide-body">
-    <div style="margin-bottom:8px; font-size:11px; color:var(--mid);">宇佐合気道会HPのログイン機能として制作。ログイン→会員ID忘れ対応→完了画面の流れを実装しました。</div>
+    <p class="desc-text">宇佐合気道会HPのログイン機能として制作。ログイン → ID/PW忘れ対応 → 完了画面の流れを実装しました。</p>
     <div class="login-flow">
       <div class="login-card">
         <div class="login-img">
-          <img src="images/login3.png" alt="ログイン画面">
+          <img src="images/login3.png" alt="ログイン入力画面 — 会員IDとパスワードを入力する画面">
         </div>
         <div class="login-info">
           <div class="login-title">① ログイン画面</div>
           <div class="login-desc">会員ID・パスワード入力</div>
         </div>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-arrow" aria-hidden="true">→</div>
       <div class="login-card">
         <div class="login-img">
-          <img src="images/login2.png" alt="パスワード忘れ">
+          <img src="images/login2.png" alt="ID・パスワード忘れ案内画面">
         </div>
         <div class="login-info">
           <div class="login-title">② ID/PW忘れ画面</div>
           <div class="login-desc">道場長へ連絡案内</div>
         </div>
       </div>
-      <div class="flow-arrow">→</div>
+      <div class="flow-arrow" aria-hidden="true">→</div>
       <div class="login-card">
         <div class="login-img">
-          <img src="images/login1.png" alt="ログイン完了">
+          <img src="images/login1.png" alt="ログイン完了画面 — 会員メニューが表示される">
         </div>
         <div class="login-info">
           <div class="login-title">③ ログイン完了画面</div>
@@ -769,24 +771,22 @@
         </div>
       </div>
     </div>
-    <div style="margin-top:10px; font-size:10px; color:var(--light); background:var(--bg); padding:6px 10px;">
-      使用言語：HTML / CSS / JavaScript / PHP / MySQL　　機能：会員認証・セッション管理
-    </div>
+    <div class="note-box">使用言語：HTML / CSS / JavaScript / PHP / MySQL　　機能：会員認証・セッション管理</div>
   </div>
   <div class="page-num">— 7 —</div>
 </div>
 
-<!-- ===== SLIDE 8: VIDEO ===== -->
+<!-- SLIDE 8: VIDEO -->
 <div class="slide">
   <div class="slide-header">
     <span class="slide-tag">Works 06</span>
     <span class="slide-title">デジタルサイネージ動画</span>
   </div>
   <div class="slide-body">
-    <div style="margin-bottom:8px; font-size:11px; color:var(--mid);">サークル活動で制作した15秒のデジタルサイネージ用動画2点。Canvaのアニメーション機能を活用しました。</div>
+    <p class="desc-text">サークル活動で制作した15秒のデジタルサイネージ用動画2点。Canvaのアニメーション機能を活用しました。</p>
     <div class="video-grid">
       <div class="video-card">
-        <video width="100%" height="120px" controls style="display:block;">
+        <video width="100%" height="130px" controls style="display:block;" aria-label="デジタルサイネージ動画 小泉構文 15秒">
           <source src="小泉構文.mp4" type="video/mp4">
         </video>
         <div class="video-info">
@@ -795,7 +795,7 @@
         </div>
       </div>
       <div class="video-card">
-        <video width="100%" height="120px" controls style="display:block;">
+        <video width="100%" height="130px" controls style="display:block;" aria-label="デジタルサイネージ動画 適性検査 15秒">
           <source src="適性検査.mp4" type="video/mp4">
         </video>
         <div class="video-info">
@@ -804,21 +804,19 @@
         </div>
       </div>
     </div>
-    <div style="margin-top:10px; font-size:10px; color:var(--light); background:var(--bg); padding:6px 10px;">
-      ツール：Canva　用途：学校内デジタルサイネージへの掲示を想定して制作
-    </div>
+    <div class="note-box">ツール：Canva　用途：学校内デジタルサイネージへの掲示を想定して制作</div>
   </div>
   <div class="page-num">— 8 —</div>
 </div>
 
-<!-- ===== SLIDE 9: THANK YOU ===== -->
+<!-- SLIDE 9: THANK YOU -->
 <div class="slide thankyou">
   <div class="ty-title">THANK YOU</div>
   <div class="ty-sub">ポートフォリオをご覧いただき、ありがとうございました。</div>
   <div class="ty-line"></div>
   <div class="ty-text">
     高校卒業後、長年PCに触れる機会がないまま社会人経験を重ねてきました。<br>
-    そして昨年IVY大分高度コンピュータ専門学校への入学を機に<br>
+    しかし昨年、IVY大分高度コンピュータ専門学校への入学を機に<br>
     授業・課題・独学に真摯に取り組み、約1年でWebサイト制作までできるようになりました。<br><br>
     遅いスタートだからこそ、一つひとつを大切に積み上げてきた自信があります。<br>
     これからも新たなものに挑戦し続けます。<br><br>
